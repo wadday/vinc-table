@@ -7,10 +7,22 @@
     "serve": "vue-cli-service serve",
     "build": "cross-env NODE_ENV=production rollup -c",
     "lint": "vue-cli-service lint",
-    "demo": "vue-cli-service build",
-    "pub": "sh ./publish.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "demo": "vue-cli-service build wadday",
+    "pub": "sh ./publish.sh wadday",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wadday": "echo \"Deleting existing files\" remove && echo \"Copying New files\" && copy-files-from-to",
+    "remove": "rm -rf ./dist/css/style.css rm -rf ./dist/css/style.css.map"
   },
+  "copyFiles": [
+    {
+      "from": "./src/scss/style.css",
+      "to": "./dist/css/style.css"
+    },
+    {
+      "from": "./src/scss/style.css.map",
+      "to": "./dist/css/style.css.map"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/wadday/vinc-table.git"
@@ -49,8 +61,12 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "node-sass": "^4.12.0",
+    "rollup-plugin-tailwind": "^1.0.0",
     "sass-loader": "^8.0.0",
     "standard": "^14.3.1",
+    "style-resources-loader": "^1.2.1",
+    "tailwindcss": "^1.1.2",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3",
     "vue-template-compiler": "^2.6.10"
   }
 }

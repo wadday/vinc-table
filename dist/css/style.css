@@ -1,0 +1,21 @@
+.wadday {
+  @apply bg-blue-500;
+}
+
+.hassan {
+  font: bold;
+}
+
+.other {
+  background: red;
+  font-weight: bold;
+}
+.other:hover {
+  color: blue;
+  background: red;
+}
+.other .hassan {
+  background: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
